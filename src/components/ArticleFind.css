@@ -1,0 +1,74 @@
+.title {
+    background: #0762c4;
+    color: #ffffff;
+    width: 100%;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+.title h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.input__wrapper {
+    margin: 20px;
+    text-align: center;
+}
+
+.input__wrapper input {
+    padding: 8px 15px;
+    border: 3px solid #0762c4;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.input__wrapper input:focus {
+    outline: none;
+}
+
+.input__wrapper button {
+    background: #0762c4;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    border: 3px solid #0762c4;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.download__wrapper button {
+    border: 3px solid green;
+    background: green;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border: 3px solid green;
+    border-radius: 5px;
+    margin-left: 700px;
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+.body__item {
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    text-align: left !important;
+}
+
+
+.notFound {
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    text-align: center;
+}

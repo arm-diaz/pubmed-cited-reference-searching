@@ -44,3 +44,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# Useful links
+https://github.com/syket-git/UserSearchSystem/tree/master/src
+https://www.youtube.com/watch?v=E0BqKhZA6Ao
+https://www.baeldung.com/cs/cors-preflight-requests
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers
+https://github.com/academind/xhr-fetch-axios-intro/blob/xhr/xhr.js
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+https://github.com/titipata/pubmed_parser/blob/master/pubmed_parser/pubmed_web_parser.py
