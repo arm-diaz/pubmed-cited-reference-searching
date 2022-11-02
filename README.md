@@ -53,3 +53,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers
 https://github.com/academind/xhr-fetch-axios-intro/blob/xhr/xhr.js
 https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 https://github.com/titipata/pubmed_parser/blob/master/pubmed_parser/pubmed_web_parser.py
+https://khalilstemmler.com/blogs/typescript/node-starter-project/
+http://typescript-react-primer.loyc.net/tutorial-3.html
+https://www.newline.co/courses/tinyhouse-react-masterclass-part-2/deploying-with-heroku
+http://typescript-react-primer.loyc.net/tutorial-3.html
