@@ -23,7 +23,7 @@ export const ExportToExcel = ({apiData, fileName} : exportTypes) => {
 
   return (
     <div className="download__wrapper"> 
-      <button id="download-button" onClick={(e) => exportToCSV(apiData, fileName)}> Export</button>
+      <button id="download-button" onClick={(e) => exportToCSV(apiData, fileName)}> Export Citations</button>
     </div> 
   );
   

@@ -146,24 +146,30 @@ const ArticleFind: React.FC = () => {
             </div>
             <div>  
 
-            <div className="App">
-                
-            </div>
-
             <div className="input__wrapper"> 
+
+            <div className="box1">
                 <h3>Articles that cite a given article</h3>
                 <br />
                 <input id="api1" type="text" placeholder="Search PMID" value={id1} onChange={e => setID1(e.target.value)}/>
                 <button id="1" onClick={event => getData(id1, api1, `${id1}_articles_citedby`)}>Search</button>
-                <br />
-                <br />
-
-                <ExportToExcel apiData={apiList} fileName={fileName}/>
 
                 <h3>Articles that a given article cites</h3>
                 <br />
                 <input id="api2" type="text" placeholder="Search PMID" value={id2} onChange={e => setID2(e.target.value)}/>
                 <button id="2" onClick={event2 => getData(id2, api2, `{id1}_article_cites`)}>Search</button>
+                </div>
+                <div className="box2">
+                <div className="download__wrapper">
+                    <a href="https://drive.google.com/uc?export=download&id=1ei1LEpHbaZ84GTX7oi5tjSK2iRiUBX7m" target="_blank">
+                    <button type="submit">Download PDF Finder App</button>
+                    </a>
+                </div>
+                <br />
+
+                <ExportToExcel apiData={apiList} fileName={fileName}/>
+
+                </div>
                 
             </div>
 
