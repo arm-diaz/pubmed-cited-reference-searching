@@ -1,12 +1,60 @@
 import React, { useEffect } from 'react';
 
+import Box from '@mui/material/Box';
+//import Stack from '@mui/material/Stack';
+import Fab from '@mui/material/Fab';
+import GetAppRoundedIcon from '@mui/icons-material/GetAppRounded';
+
 import './ArticleFind.css';
 import {ExportToExcel} from './ExportToExcel'
+import { MuscHeader } from './MuscDecs';
 
 
 export interface ApiObject {
     PubMedID: string | undefined
 }
+
+const style1 = {
+    margin: 0,
+    top: 'auto',
+    right: 20,
+    bottom: 80,
+    left: 'auto',
+    position: 'fixed',
+};
+
+const style2 = {
+    margin: 0,
+    top: 'auto',
+    right: 20,
+    bottom: 20,
+    left: 'auto',
+    position: 'fixed',
+};
+
+
+export function FloatingActionButtons() {
+    return (
+        <>
+      <Box sx={style1}>
+        <a href="https://drive.google.com/uc?export=download&id=1ei1LEpHbaZ84GTX7oi5tjSK2iRiUBX7m" target="_blank">
+        <Fab color="primary" aria-label="add" variant="extended" >
+          <GetAppRoundedIcon />
+          PDF Finder App
+        </Fab>
+        </a>
+      </Box>
+
+    <Box sx={style2}>
+    <a href="https://docs.google.com/document/d/1JEm3Vp3gSRtIy6xaStS4PDLaBW9E_zeA/export?format=pdf" target="_blank">
+    <Fab color="primary" aria-label="add" variant="extended" >
+    <GetAppRoundedIcon />
+    Installation Manual
+    </Fab>
+    </a>
+    </Box>
+</>);
+  }
 
 const ArticleFind: React.FC = () => {
     const [id1, setID1] = React.useState<string>("")
@@ -139,11 +187,17 @@ const ArticleFind: React.FC = () => {
 
 
     return (
+        <>
+         <MuscHeader/>
+         <FloatingActionButtons/>
         <div>
+           
             <div className='title'>
           
             <h1>Cited Reference Searching</h1>
+            
             </div>
+            
             <div>  
 
             <div className="input__wrapper"> 
@@ -160,16 +214,10 @@ const ArticleFind: React.FC = () => {
                 <button id="2" onClick={event2 => getData(id2, api2, `{id1}_article_cites`)}>Search</button>
                 </div>
                 <div className="box2">
-                <div className="download__wrapper">
-                    <a href="https://drive.google.com/uc?export=download&id=1ei1LEpHbaZ84GTX7oi5tjSK2iRiUBX7m" target="_blank">
-                    <button type="submit">Download PDF Finder App</button>
-                    </a>
-                </div>
-                <br />
 
                 <ExportToExcel apiData={apiList} fileName={fileName}/>
-
                 </div>
+            
                 
             </div>
 
@@ -191,6 +239,7 @@ const ArticleFind: React.FC = () => {
                     })}
                 </div>
         </div>
+        </>
     );
 }
 

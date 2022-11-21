@@ -2,7 +2,7 @@
     background: #0762c4;
     color: #ffffff;
     width: 100%;
-    padding: 40px 0px;
+    padding: 15px 0px;
     text-align: center;
 }
 
@@ -62,6 +62,7 @@
     padding: 20px;
     border: 1px solid blue;
     text-align: center;
+    color: black;
     }
 
 .box2{
@@ -70,6 +71,15 @@
     padding: 20px;
     border: 1px solid green;
     text-align: center;
+    }
+
+.box3{
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid blue;
+    text-align: center;
+    color: black;
     }
 
 .downloadApp__wrapper button {
@@ -93,6 +103,7 @@
     padding: 20px;
     border: 1px solid lightgray;
     text-align: left !important;
+    color: black;
 }
 
 
@@ -102,4 +113,5 @@
     padding: 20px;
     border: 1px solid lightgray;
     text-align: center;
+    color: black;
 }

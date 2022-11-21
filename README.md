@@ -57,3 +57,5 @@ https://khalilstemmler.com/blogs/typescript/node-starter-project/
 http://typescript-react-primer.loyc.net/tutorial-3.html
 https://www.newline.co/courses/tinyhouse-react-masterclass-part-2/deploying-with-heroku
 http://typescript-react-primer.loyc.net/tutorial-3.html
+https://freemediatools.com/drivelinkgenerator
+https://syncwithtech.blogspot.com/p/direct-download-link-generator.html
