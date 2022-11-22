@@ -252,13 +252,13 @@ const ArticleFind: React.FC = () => {
                     {apiList &&  id1 !== "" &&
                     apiList?.length > 0 &&
                     (
-                        <div className="found"> <b>Searching articles that cited a given PubMedID</b></div>
+                        <div className="found"> <b>Searching articles that cited PubMedID: {id1}</b></div>
                     )}
 
                     {apiList &&  id2 !== "" &&
                     apiList?.length > 0 &&
                     (
-                        <div className="found"> <b>Searching for citations in a given PubMedID</b></div>
+                        <div className="found"> <b>Searching for citations in PubMedID: {id2}</b></div>
                     )}
 
                     {apiList &&
