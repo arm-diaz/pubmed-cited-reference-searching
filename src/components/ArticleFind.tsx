@@ -246,7 +246,7 @@ const ArticleFind: React.FC = () => {
             </div>
             <div className="body">
                     {apiList &&  id1 === "" && id2 === "" && apiList?.length === 0 && (
-                    <div className="notFound">No data Found</div>
+                    <div className="notFound">No Data Found</div>
                     )}
 
                     {apiList &&  id1 !== "" &&
