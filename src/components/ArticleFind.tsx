@@ -62,6 +62,28 @@ const ArticleFind: React.FC = () => {
     const [fileName, setFileName] = React.useState<string>("")
     //const [data, setData] = React.useState<ApiObject>({PubMedID : ""})
 
+    useEffect(() => {
+        if (id1 !== ""){
+            setID2(() => "");
+            setAPI1List([])
+        } else {
+            setID1(() => "");
+            setAPI1List([])
+        }
+      }, [id1]);
+
+    
+    useEffect(() => {
+        if (id2 !== ""){
+            setID1(() => "");
+            setAPI1List([])
+        } else {
+            setID2(() => "");
+            setAPI1List([])
+        }
+      }, [id2]);
+
+
     const [apiList, setAPI1List] = React.useState<ApiObject[]>([]);
 
     const api1 = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&linkname=pubmed_pubmed_citedin&id="
@@ -203,12 +225,12 @@ const ArticleFind: React.FC = () => {
             <div className="input__wrapper"> 
 
             <div className="box1">
-                <h3>Articles that cite a given article</h3>
+                <h3>Search who cited a given article</h3>
                 <br />
                 <input id="api1" type="text" placeholder="Search PMID" value={id1} onChange={e => setID1(e.target.value)}/>
                 <button id="1" onClick={event => getData(id1, api1, `${id1}_articles_citedby`)}>Search</button>
 
-                <h3>Articles that a given article cites</h3>
+                <h3>Search for citations in a given article</h3>
                 <br />
                 <input id="api2" type="text" placeholder="Search PMID" value={id2} onChange={e => setID2(e.target.value)}/>
                 <button id="2" onClick={event2 => getData(id2, api2, `{id1}_article_cites`)}>Search</button>
@@ -223,8 +245,20 @@ const ArticleFind: React.FC = () => {
 
             </div>
             <div className="body">
-                    {apiList && apiList?.length === 0 && (
+                    {apiList &&  id1 === "" && id2 === "" && apiList?.length === 0 && (
                     <div className="notFound">No data Found</div>
+                    )}
+
+                    {apiList &&  id1 !== "" &&
+                    apiList?.length > 0 &&
+                    (
+                        <div className="found"> <b>Searching who cited a given article</b></div>
+                    )}
+
+                    {apiList &&  id2 !== "" &&
+                    apiList?.length > 0 &&
+                    (
+                        <div className="found"> <b>Searching for citations in a given article</b></div>
                     )}
 
                     {apiList &&

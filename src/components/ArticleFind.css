@@ -47,7 +47,7 @@
     color: white;
     padding: 10px 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     border: none;
     border: 3px solid green;
     border-radius: 5px;
@@ -114,4 +114,14 @@
     border: 1px solid lightgray;
     text-align: center;
     color: black;
+}
+
+.found {
+    width: 500px;
+    margin: 0px auto;
+    padding: 0px;
+    border: 0px solid lightgray;
+    text-align: center;
+    color: green;
+    font-size: 18px;
 }
