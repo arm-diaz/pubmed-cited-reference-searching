@@ -18,7 +18,7 @@
 }
 
 .input__wrapper input {
-    padding: 8px 40px;
+    padding: 10px 40px;
     border: 3px solid #0762c4;
     border-radius: 5px;
     font-size: 18px;
@@ -34,7 +34,7 @@
 .input__wrapper button {
     background: #0762c4;
     color: white;
-    padding: 8px 15px;
+    padding: 10px 30px;
     text-align: center;
     font-size: 18px;
     border: none;
