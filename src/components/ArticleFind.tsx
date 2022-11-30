@@ -225,19 +225,22 @@ const ArticleFind: React.FC = () => {
             <div className="input__wrapper"> 
 
             <div className="box1">
-                <h3>Search articles that cited a given PubMedID</h3>
-                <br />
-                <input id="api1" type="text" placeholder="Search PMID" value={id1} onChange={e => setID1(e.target.value)}/>
+                <h3>Search for the PubMedIDs of articles that cite this article</h3>
+
+                <input id="api1" type="text" placeholder="Enter PubMedID" value={id1} onChange={e => setID1(e.target.value)}/>
                 <button id="1" onClick={event => getData(id1, api1, `articles_that_cited_PubMedID_${id2}`)}>Search</button>
 
-                <h3>Search for citations in a given PubMedID</h3>
-                <br />
-                <input id="api2" type="text" placeholder="Search PMID" value={id2} onChange={e => setID2(e.target.value)}/>
+                <h3>Search for the PubMedIDs of articles cited by this article</h3>
+
+                <input id="api2" type="text" placeholder="Enter PubMedID" value={id2} onChange={e => setID2(e.target.value)}/>
                 <button id="2" onClick={event2 => getData(id2, api2, `citations_in_PubMedID_${id2}`)}>Search</button>
+                <br />
+                <br />
                 </div>
                 <div className="box2">
-
+                <br />
                 <ExportToExcel apiData={apiList} fileName={fileName}/>
+                <br />
                 </div>
             
                 
@@ -252,13 +255,13 @@ const ArticleFind: React.FC = () => {
                     {apiList &&  id1 !== "" &&
                     apiList?.length > 0 &&
                     (
-                        <div className="found"> <b>Searching articles that cited PubMedID: {id1}</b></div>
+                        <div className="found"> <b>Articles cited by PubMedID: {id1}</b></div>
                     )}
 
                     {apiList &&  id2 !== "" &&
                     apiList?.length > 0 &&
                     (
-                        <div className="found"> <b>Searching for citations in PubMedID: {id2}</b></div>
+                        <div className="found"> <b>Articles that cited PubMedID: {id2}</b></div>
                     )}
 
                     {apiList &&
