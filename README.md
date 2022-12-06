@@ -59,3 +59,5 @@ https://www.newline.co/courses/tinyhouse-react-masterclass-part-2/deploying-with
 http://typescript-react-primer.loyc.net/tutorial-3.html
 https://freemediatools.com/drivelinkgenerator
 https://syncwithtech.blogspot.com/p/direct-download-link-generator.html
+
+https://stackoverflow.com/questions/39761030/placeholder-auto-wrap-inside-a-input-field

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import Box from '@mui/material/Box';
+import {Box, Typography, ThemeProvider, createTheme} from '@mui/material';
 //import Stack from '@mui/material/Stack';
 import Fab from '@mui/material/Fab';
 import GetAppRoundedIcon from '@mui/icons-material/GetAppRounded';
@@ -18,7 +18,7 @@ const style1 = {
     margin: 0,
     top: 'auto',
     right: 20,
-    bottom: 80,
+    bottom: 120,
     left: 'auto',
     position: 'fixed',
 };
@@ -33,20 +33,47 @@ const style2 = {
 };
 
 
+const theme = createTheme({
+    typography: {
+      // In Chinese and Japanese the characters are usually larger,
+      // so a smaller fontsize may be appropriate.
+      fontSize: 14,
+      fontWeightBold: 700,
+      
+
+    },
+  });
+
 export function FloatingActionButtons() {
     return (
         <>
       <Box sx={style1}>
         <a href="https://drive.google.com/uc?export=download&id=1ei1LEpHbaZ84GTX7oi5tjSK2iRiUBX7m" target="_blank">
+        <ThemeProvider theme={theme}>
+        <Typography align="center">
+            Download free PDFs
+            <br />
+            with PDF Finder App:
+            <br />
+            Available only on Windows
+        </Typography>
+        </ThemeProvider>
         <Fab color="primary" aria-label="add" variant="extended" >
           <GetAppRoundedIcon />
           PDF Finder App
         </Fab>
         </a>
       </Box>
-
+        
     <Box sx={style2}>
     <a href="https://docs.google.com/document/d/1JEm3Vp3gSRtIy6xaStS4PDLaBW9E_zeA/export?format=pdf" target="_blank">
+    <ThemeProvider theme={theme}>
+        <Typography align="center">
+        Download installation guide
+        <br />
+        for PDF Finder App
+        </Typography>
+        </ThemeProvider>
     <Fab color="primary" aria-label="add" variant="extended" >
     <GetAppRoundedIcon />
     Installation Manual
@@ -228,12 +255,12 @@ const ArticleFind: React.FC = () => {
                 <h3>Search for the PubMedIDs of articles that cite this article</h3>
 
                 <input id="api1" type="text" placeholder="Enter PubMedID" value={id1} onChange={e => setID1(e.target.value)}/>
-                <button id="1" onClick={event => getData(id1, api1, `articles_that_cited_PubMedID_${id2}`)}>Search</button>
+                <button id="1" onClick={event => getData(id1, api1, `article_cited_by_PubMedID_${id1}`)}>Search</button>
 
                 <h3>Search for the PubMedIDs of articles cited by this article</h3>
 
                 <input id="api2" type="text" placeholder="Enter PubMedID" value={id2} onChange={e => setID2(e.target.value)}/>
-                <button id="2" onClick={event2 => getData(id2, api2, `citations_in_PubMedID_${id2}`)}>Search</button>
+                <button id="2" onClick={event2 => getData(id2, api2, `articles_that_cited_PubMedID_${id2}`)}>Search</button>
                 <br />
                 <br />
                 </div>
