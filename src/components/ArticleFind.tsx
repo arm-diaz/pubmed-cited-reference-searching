@@ -249,6 +249,23 @@ const ArticleFind: React.FC = () => {
             
             <div>  
 
+            <div className="box4">
+
+            <h2> This website allows you to find the PubMed IDs (PMIDs) of </h2>
+            <ul>
+                <li><h3>Papers that cite a given paper</h3></li>
+                <ul>
+                    <li>Enter a PMID</li>
+                    <li>Get a list of PMIDs that cite that paper</li>
+                    <li>Download the list​</li>
+                    <li>Install the PDF finder APP​</li>
+                    <li>Import the PMID list and find all relevant PDFs that are freely available</li>
+                </ul>
+                <li><h3>Papers that a given paper cites​</h3></li>
+                <ul><li>Then the process to get list and PDFs is the same as above​</li></ul>
+            </ul>
+            </div>
+
             <div className="input__wrapper"> 
 
             <div className="box1">
