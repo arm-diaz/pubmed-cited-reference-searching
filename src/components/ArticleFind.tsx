@@ -262,7 +262,10 @@ const ArticleFind: React.FC = () => {
                     <li>Import the PMID list and find all relevant PDFs that are freely available</li>
                 </ul>
                 <li><h3>Papers that a given paper cites​</h3></li>
-                <ul><li>Then the process to get list and PDFs is the same as above​</li></ul>
+                <ul>
+                    <li>Enter a PMID</li>
+                    <li>Then the process to get list and PDFs is the same as above​</li>
+                </ul>
             </ul>
             </div>
 
@@ -286,13 +289,8 @@ const ArticleFind: React.FC = () => {
                 <ExportToExcel apiData={apiList} fileName={fileName}/>
                 <br />
                 </div>
-            
-                
-            </div>
 
-            </div>
-            <div className="body">
-                    {apiList &&  id1 === "" && id2 === "" && apiList?.length === 0 && (
+                {apiList &&  id1 === "" && id2 === "" && apiList?.length === 0 && (
                     <div className="notFound">No Data Found</div>
                     )}
 
@@ -318,7 +316,9 @@ const ArticleFind: React.FC = () => {
                         </div>
                         );
                     })}
-                </div>
+            </div>
+
+            </div>
         </div>
         </>
     );

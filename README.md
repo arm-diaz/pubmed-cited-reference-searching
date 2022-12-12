@@ -61,3 +61,4 @@ https://freemediatools.com/drivelinkgenerator
 https://syncwithtech.blogspot.com/p/direct-download-link-generator.html
 
 https://stackoverflow.com/questions/39761030/placeholder-auto-wrap-inside-a-input-field
+https://stackoverflow.com/questions/18816486/how-can-i-make-a-pointy-arrow-with-a-div-in-css
