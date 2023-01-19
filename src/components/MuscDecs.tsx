@@ -10,6 +10,14 @@ export const MuscHeader = () => {
         navigate('/')
     }
 
+    /*
+    <Box display='flex' 
+    sx={{
+        backgroundColor:'white'}}>
+    <img src={musc} height={100}  onClick={handleImageClick}/>
+    </Box>
+
+    */
     return (<>
 
       <Paper 
@@ -28,7 +36,6 @@ export const MuscHeader = () => {
               <Box display='flex' 
                   sx={{
                       backgroundColor:'white'}}>
-                  <img src={musc} height={100}  onClick={handleImageClick}/>
               </Box>
               <Box display='flex' flex='1' flexDirection='column'>
                   <Typography 
