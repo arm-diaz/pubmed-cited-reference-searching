@@ -118,6 +118,12 @@ const ArticleFind: React.FC = () => {
 
     
     const getData = (id: string | undefined, url: string, fileName: string) => {
+        console.log("DEBUG: ", process.env)
+        if (process.env.NODE_ENV == 'development') {
+            console.log("DEBUG: ", process.env.REACT_APP_DEV)
+        } else {
+            console.log("DEBUG: ", process.env.REACT_APP_PROD)
+        }
         //const id = 21876726, 21645191;
         setFileName(fileName);
 
